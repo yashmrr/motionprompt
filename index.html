@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion to Prompt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Motion <span class="accent">Extractor</span></h1>
+            <p>Upload a UI video. Get the prompt.</p>
+        </header>
+
+        <div class="upload-area" id="dropZone">
+            <input type="file" id="videoInput" accept="video/mp4, video/quicktime" hidden>
+            <div class="icon">📂</div>
+            <p>Click to upload video (MP4)</p>
+            <p class="sub-text">Max 10 seconds</p>
+        </div>
+
+        <video id="videoPreview" controls style="display: none;"></video>
+
+        <button id="generateBtn">Generate Prompt</button>
+        <a id="unlockLink" href="https://test.checkout.dodopayments.com/buy/pdt_0NXr67LxOvNxJaF0cYVh1?quantity=1" target="_blank">
+    <button id="unlockBtn" style="
+        width:100%;
+        margin-top:10px;
+        padding:12px;
+        background-color:#22c55e;
+        color:white;
+        border:none;
+        border-radius:8px;
+        font-weight:bold;
+        cursor:pointer;
+    ">
+        Unlock Tool 🚀
+    </button>
+</a>
+
+
+        <div id="resultArea" class="hidden">
+            <div class="result-header">
+                <span>VIBE CODING PROMPT</span>
+                <button id="copyBtn">Copy</button>
+            </div>
+            <textarea id="outputPrompt" readonly>Your prompt will appear here...</textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
